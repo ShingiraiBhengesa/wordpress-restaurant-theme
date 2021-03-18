@@ -1,0 +1,712 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.8em;
+    color: #666;
+    font-family: 'Oswald', sans-serif;
+}
+
+a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+button {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    color: #666;
+    background-color: #ddd;
+    text-transform: uppercase;
+    padding: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Bars */
+.navbar {
+    background-color: #282e28;
+    overflow: hidden;
+    height: 63px;
+}
+
+.navbar__nav .navbar__logo a {
+    padding: 0;
+}
+
+.navbar__logo img {
+    height: 63px;
+    width: auto;
+    display: block;
+    float: left;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 16px;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.navbar ul {
+    margin: 0;
+    list-style: none;
+}
+
+.navbar a:hover {
+    color: #000;
+}
+
+/* Mobile Navigation */
+.side__nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    opacity: 0.9;
+    overflow: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.side__nav a {
+    padding: 10px 10px 10px 30px;
+    font-size: 22px;
+    color: #ccc;
+    display: block;
+    transition: 0.4s;
+}
+
+.side__nav a:hover {
+    color: #fff;
+}
+
+.side__nav .btn__close {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Main Body */
+#main {
+    transition: margin-left 0.5s;
+    overflow: hidden;
+    width: 100%;
+}
+
+.header__image {
+    height: 100vh;
+    color: #ddd;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.header__main-text {
+    margin-bottom: 20px;
+}
+
+.header__main-text h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    background-color: #666;
+    padding: 30px;
+}
+
+.header__small-text {
+    margin-bottom: 10px;
+    background-color: #666;
+    padding: 10px;
+}
+
+.header__weekday p {
+    font-weight: bold;
+    background-color: #666;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.header__weekday-opening {
+    margin-bottom: 10px;
+    background-color: #666;
+    padding: 5px;
+}
+
+.header__weekend p {
+    font-weight: bold;
+    background-color: #666;
+    padding: 5px;
+}
+
+.header__weekend-opening p {
+    background-color: #666;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+/* Sections */
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+/* Text Section */
+.section__text p {
+    letter-spacing: 1px;
+}
+
+/* Restaurant Section */
+.section__restaurants {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    height: 100vh;
+}
+
+.section__restaurants h2 {
+    padding: 30px;
+    font-size: 3em;
+    letter-spacing: 1px;
+    color: #ddd;
+}
+
+.restaurants {
+    padding: 30px 20px 20px 20px;
+    display: grid;
+    grid-gap: 20px;
+    align-items: start;
+    justify-content: center;
+    grid-template-areas:
+    'restaurant_one restaurant_two restaurant_three';
+}
+
+.restaurants__one {
+    grid-area: restaurant_one;
+}
+
+.restaurants__two {
+    grid-area: restaurant_two;
+}
+
+.restaurants__three {
+    grid-area: restaurant_three;
+}
+
+.restaurants__one a, .restaurants__two a, .restaurants__three a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.restaurants__one a:hover, .restaurants__two a:hover, .restaurants__three a:hover {
+    text-decoration: underline;
+}
+
+.restaurants__one img, .restaurants__two img, .restaurants__three img {
+    width: 400px;
+    height: 400px;
+}
+
+/* News Section */
+.section__events {
+    background-color: #282e32;
+    color: #ddd;
+}
+
+.section__events h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 3em;
+}
+
+.news__front {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.news__boxes {
+    width: 400px;
+    margin: 20px;
+    border: 1px solid #ddd;
+}
+
+.news__boxes img {
+    max-width: 100%;
+    height: auto;
+}
+
+.news__boxes h2 {
+    font-size: 1.5em;
+}
+
+.news__boxes p {
+    padding: 10px;
+    text-align: left;
+    font-size: 1,4em;
+}
+
+a.news__boxes:hover {
+    text-decoration: underline;
+}
+
+a.button__posts {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    color: #666;
+    background-color: #ddd;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+a.button__posts:hover {
+    text-decoration: underline;
+}
+
+/* Pages Section */
+.section__pages {
+    display: grid;
+    grid-template-areas: 'left right';
+    gap: 100px;
+    justify-content: center;
+}
+
+.section__pages a {
+    color: #666;
+}
+
+.section__pages a:hover {
+    text-decoration: underline;
+}
+
+.pages__left {
+    grid-area: left;
+    padding: 50px;
+    border-top: 2px solid #282e28;
+    border-bottom: 2px solid #282e28;
+}
+
+.pages__right {
+    grid-area: right;
+    padding: 50px;
+    border-top: 2px solid #282e28;
+    border-bottom: 2px solid #282e28;
+}
+
+/* Website Pages */
+/* General Template */
+.page__thumbnail {
+    max-width: 100%;
+    width: 100%;
+    height: 70vh;
+}
+
+.page__thumbnail img {
+    width: 100%;
+    height: 70vh;
+}
+
+.page__main {
+    padding: 30px;
+}
+
+.page__main h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+
+.page__main p {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
+}
+
+/* Reservations layout */
+.rtb-booking-form {
+    text-align: center;
+}
+
+
+.rtb-booking-form legend, .rtb-booking-form label {
+    font-weight: bold;
+}
+
+.rtb-booking-form input {
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#rtb-party {
+    font-size: 20px;
+}
+
+.add-message a {
+    color: #282e28;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.add-message a:hover {
+    text-decoration: underline;
+}
+
+/* Menus Page */
+.page__img img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Contact Page */
+.wpcf7-form label {
+    font-weight: bold;
+}
+
+.wpcf7-form input {
+    width: 50%;
+    padding: 20px 10px;
+    font-size: 20px;
+}
+
+.wpcf7-form textarea {
+    width: 50%;
+    padding: 20px 10px;
+    font-size: 16px;
+}
+
+/* Restaurant Pages */
+.booking {
+    margin: 40px;
+    text-align: center;
+}
+
+.section__contact {
+    text-align: center;
+    padding: 40px;
+    letter-spacing: 1px;
+}
+
+.section__contact h2 {
+    margin-bottom: 30px;
+}
+
+.section__contact span {
+    font-weight: bold;
+}
+
+/* Pagination */
+.section__pagination {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.section__pagination a {
+    font-size: 1.5em;
+}
+
+a.prev {
+    padding-right: 10px;
+}
+
+a.next {
+    padding-left: 10px;
+}
+
+.page-numbers {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.page-numbers:hover {
+    background-color: #ddd;
+    color: #282e32;
+}
+
+.current {
+    text-decoration: underline;
+}
+
+/* Single Blog page */
+/* categories */
+ul.post-categories {
+    list-style: none;
+}
+
+ul.post-categories li {
+    margin-bottom: 20px;
+}
+
+ul.post-categories li a {
+    background-color: #282e32;
+    padding: 10px;
+    margin-left: 30px;
+}
+
+/* Tags */
+.page__meta a:hover {
+    text-decoration: underline;
+    color: #282e32;
+    background-color: #ddd;
+    padding: 10px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #282e28;
+    padding: 50px;
+    display: grid;
+    gap: 30px;
+    grid-template-areas: 'navigation location booking'
+    'social events .';
+}
+
+.footer__navigation {
+    grid-area: navigation;
+}
+
+.footer__navigation h2, .footer__social h2, .footer__location h2, .footer__events h2, .footer__booking h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer__navigation ul {
+    list-style: none;
+}
+
+.footer__navigation ul li a {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    padding-top: 10px;
+}
+
+.footer__navigation ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer__location {
+    grid-area: location;
+}
+
+.footer__location p {
+    color: #ddd;
+    letter-spacing: 1px;
+}
+
+.footer__events {
+    grid-area: events;
+}
+
+.footer__events span {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.footer__events p {
+    letter-spacing: 1px
+}
+
+.footer__events h3, .footer__events p {
+    color: #ddd;
+}
+
+.footer__booking {
+    grid-area: booking;
+}
+
+.footer__booking a {
+    letter-spacing: 1px;
+}
+
+.footer__social {
+    grid-area: social;
+}
+
+.footer__social h2 {
+    padding-bottom: 10px;
+}
+
+.footer__social a {
+    padding: 5px;
+    padding-top: 10px;
+    font-size: 2rem;
+}
+
+.footer__social a:hover {
+    font-size: 2.5rem;
+}
+/* Media Queries */
+@media(max-width: 1229px){
+    /* Restaurant Section */
+    .section__restaurants {
+        height: unset;
+    }
+
+    .restaurants {
+        display: block;
+    }
+}
+@media(max-width: 1024px){
+    .navbar__nav {
+        display: none;
+    }
+
+    .navbar__logo_mob {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+    }
+
+    .navbar__logo_mob img {
+        height: 63px;
+        width: auto;
+        display: block;
+    }
+
+    .navbar__logo_mob a {
+        padding: 0;
+    }
+
+    .header__main-text h1 {
+        font-size: 2rem;
+    }
+
+    /* Sections */
+    .section {
+        text-align: justify;
+        padding: 50px 30px;
+    }
+
+    /* Text Section */
+    .section__text p {
+        letter-spacing: 1px;
+        line-height: 20px;;
+    }
+
+    /* Restaurant Section */
+    .restaurants {
+        display: block;
+        padding: 0;
+    }
+
+    .restaurants p {
+        padding-bottom: 20px;
+    }
+
+    .section__restaurants {
+        height: unset;
+    }
+
+    /* Event Section */
+    .section__events h2 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .news__boxes {
+        margin: 0;
+        border: none;
+    }
+
+    .news__front {
+        display: block;
+    }
+
+    a.button__posts {
+        font-size: 16px;
+        text-align: center;
+        width: auto;
+        display: block;
+    }
+
+    /* Section Pages */
+    .section__pages {
+        display: block;
+    }
+
+    .pages__left {
+        padding: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .pages__right {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Event Pages */
+    .section__pagination {
+        text-align: center;
+    }
+
+    /* Contact Form */
+    .wpcf7-form input, .wpcf7-form textarea {
+        width: 90%;
+    }
+
+    .wpcf7-form-control.wpcf7-submit {
+        width: 95%;
+    }
+
+    /* Booking Form */
+    .rtb-booking-form input {
+        width: 90% !important;
+    }
+
+    .rtb-booking-form textarea {
+        height: 200px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 50px 10px 50px 10px;
+        display: block;
+        text-align: center;
+    }
+
+    .footer__navigation, .footer__social, .footer__location, .footer__events {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media(min-width: 1024px){
+    .navbar__slider {
+        display: none;
+    }
+
+    .navbar__logo_mob {
+        display: none;
+    }
+}
